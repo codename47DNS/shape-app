@@ -1,0 +1,235 @@
+/* Common Style */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* End Common Style */
+
+
+/* Header Code */
+
+header {
+    width: 100%;
+    min-width: 220px;
+    min-height: 50px;
+    padding: 20px 20px;
+    border-bottom: 1px solid rgb(199, 199, 199);
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.87);
+}
+
+.app-name {
+    color: rgb(255, 251, 0);
+    font-family: monospace;
+    font-weight: bold;
+    display: flex;
+}
+
+.app-name > div:first-child {
+    width: fit-content;
+    overflow: hidden;
+    height: 20px;
+}
+
+.app-name > div > div {
+    border: 10px solid transparent;
+    border-bottom: 20px solid rgb(255, 251, 0);
+    margin-right: 10px;
+    height: 20px;
+    margin-top: -10px;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-btn {
+    width: 20px;
+    height: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 1s;
+    margin-right: 20px;
+    margin-top: 20px;
+    transition: 1s;
+}
+
+.nav-btn > span {
+    display: block;
+    border-top: 3px solid rgba(255, 255, 255, 0.692);
+}
+
+.shrink {
+    width: 0;
+    overflow: hidden;
+    transition: 1s,background-color 3s;
+    box-shadow: 0 0 0 rgb(80, 80, 80);
+}
+
+.shrink > * {
+    width: max-content;
+    color: white;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.shrink > *:first-child {
+    margin-top: 20px;
+    font-family: arial;
+}
+
+.shrink > h4 {
+    color: rgb(255, 251, 0);
+}
+
+.shrink .Menu {
+    list-style: none;
+}
+
+.shrink .Menu li {
+    line-height: 25px;
+    font-family: calibri;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: 0.5s;
+}
+
+.shrink .Menu li:not(.activeTab):hover {
+    color: rgb(114, 253, 71);
+    margin-left: 5px;
+}
+
+/* End Header Code */
+
+
+/* Section Code */
+
+section {
+    width: 100%;
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+.cat_name {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-decoration: 1px dodgerblue underline double;
+    color: dodgerblue;
+    text-align: center;
+    font-size: 30px;
+}
+
+.con {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.select_cat {
+    width: 200px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+.formula_area {
+    margin-bottom: 10px;
+    font-family: Arial Black;
+}
+
+.inputs_con {
+    margin-bottom: 20px;
+}
+
+.inputs_con > input {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.inputs_con > input:focus {
+    outline: 1px solid dodgerblue;
+}
+
+.inputs_con > input::placeholder {
+    text-transform: capitalize;
+    color: rgb(48, 48, 48);
+}
+
+.left-con {
+    min-width: 35vw;
+    margin-bottom: 30px;
+    padding-top: 50px;
+}
+
+.space {
+    width: 0%;
+    border-left: 1px solid #ccc;
+    margin: 0 10px;
+}
+
+.right-con {
+    min-width: 35vw;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.right-con img {
+    transition: 0.5s;
+    margin-bottom: 10px;
+}
+
+.getResult {
+    padding: 5px 10px;
+    background-color: white;
+    font-family: sans-serif;
+    border: 1px solid dodgerblue;
+    color: dodgerblue;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.getResult:hover {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.msg {
+    color: red;
+    font-weight: bold;
+    font-family: monospace;
+}
+/* End Section Code */
+
+
+/* Dynamic Classes */
+
+.openNav {
+    transform: rotate(270deg);
+}
+
+.openNav + .shrink {
+    transition: 1s;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.87);
+    box-shadow: -1px 0 5px rgb(80, 80, 80);
+}
+
+.activeTab {
+    color: rgb(0, 153, 255);
+}
+/* End Dynamic Classes */
